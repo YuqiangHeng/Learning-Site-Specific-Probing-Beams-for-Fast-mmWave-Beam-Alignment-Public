@@ -3,6 +3,7 @@
 This repo implements the joint probing codebook and beam selector architecture in the paper "learning site-specific probing beams for fast mmWave beam alignment".
 * Heng, Yuqiang, Jianhua Mo, and Jeffrey G. Andrews. "Learning Site-Specific Probing Beams for Fast mmWave Beam Alignment." arXiv preprint arXiv:2107.13121 (2021).
 * https://arxiv.org/abs/2107.13121
+
 To run experiments using the DeepMIMO scenarios, please generate the datasets according to the specifications described in the paper, save the real and imaginary parts of the channel vectors to "h_real.npy"& "h_imag.npy" and place them in the Dataset folder under the appropriate sub-folders. 
 
 ### Model Training Scripts
