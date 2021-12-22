@@ -16,7 +16,6 @@ To run experiments using the DeepMIMO scenarios, please generate the datasets ac
   * Trains and saves models (learnable probing codebook + MLP classifier) under increasing probing codebook measurement noise
 * Model_Training_vs_Probing_Codebook_Quantization.py
   * Trains and saves models under different phase-shifter resolutions for the learned probing codebook.
-  * 
 ### Results and Plotting Scripts
 
 * Plot_Results_Acc_SNR_vs_Baselines.py
