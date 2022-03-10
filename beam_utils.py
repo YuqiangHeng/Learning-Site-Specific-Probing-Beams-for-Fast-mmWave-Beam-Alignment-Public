@@ -133,6 +133,13 @@ def AMCF_boundaries(n_beams):
         beam_boundaries[k,1] = beam_boundaries[k,0] + 2/n_beams
     return beam_boundaries
 
+def get_AMCF_codebook(n_beams,n_antenna,spacing=0.5):
+    AMCF_codebook_all = np.zeros((n_beams,n_antenna),dtype=np.complex_)
+    AMCF_boundary = AMCF_boundaries(n_beams)
+    for i in range(n_beams):
+        AMCF_codebook_all[i,:] = get_AMCF_beam(AMCF_boundary[i,0], AMCF_boundary[i,1],n_antenna=n_antenna,spacing=spacing)
+    return AMCF_codebook_all
+
 def pow_2_dB(x):
     return 10*np.log10(x)
 def dB_2_pow(x):
