@@ -157,7 +157,7 @@ for n_wb_i, n_wb in enumerate(n_wide_beams):
     topk_acc_dft_codebook = np.array(topk_acc_dft_codebook).mean(axis=0)
     dft_codebook_topk_acc.append(topk_acc_dft_codebook)
     
-    AMCF_wb_codebook = sio.loadmat('{}_beam_AMCF_codebook.mat'.format(n_wb))['V'].T
+    AMCF_wb_codebook = get_AMCF_codebook(n_wb, n_antenna)
     AMCF_codebook_model = Beam_Classifier(n_antenna=n_antenna,n_wide_beam=n_wb,n_narrow_beam=n_nb,
                                           trainable_codebook=False,complex_codebook=AMCF_wb_codebook,
                                           noise_power=noise_power,norm_factor=norm_factor)
